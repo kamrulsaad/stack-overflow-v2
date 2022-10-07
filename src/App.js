@@ -3,9 +3,12 @@ import SideNav from "./Components/Sidebar/SideNav";
 
 function App() {
   return (
-    <div className="flex">
-      <SideNav />
-      <Home/>
+    <div>
+      <div className="flex">
+        <SideNav />
+        <Home />
+      </div>
+      <footer>Hello Footer</footer>
     </div>
   );
 }

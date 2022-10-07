@@ -8,7 +8,7 @@ const Rightbar = () => {
     }
 
     return (
-        <div className='flex-[3] bg-slate-50'>
+        <div className='flex-[3] bg-slate-50 border-l'>
             <TopHeader text={text}/>
         </div>
     );

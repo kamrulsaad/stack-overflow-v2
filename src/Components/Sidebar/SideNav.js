@@ -6,19 +6,19 @@ const SideNav = () => {
     const Menus = [
         { title: "Questions", src: "question" },
         { title: "Jobs", src: "briefcase" },
-        { title: "Documentation", src: "document" },
+        { title: "Documentation", src: "document", sup: "NEW" },
         { title: "Tags", src: "tags" },
         { title: "Users", src: "user" },
         { title: "Badges", src: "bookmark" },
         { title: "Ask Question", src: "speaker" },
         { title: "Stack Exchange", src: "stack" },
-        { title: "Inbox", src: "inbox" },
+        { title: "Inbox", src: "inbox", message: 24 },
     ];
 
     return (
         <div
             className={` ${open ? "w-72" : "w-20"
-                } h-screen p-5 pt-8 relative shadow-2xl duration-300`}
+                }  p-5 pt-8 relative shadow-2xl duration-300`}
         >
             <img
                 src={"assets/control.png"}
@@ -45,7 +45,8 @@ const SideNav = () => {
                     >
                         <img className='w-5' src={`assets/${Menu.src}.svg`} alt='' />
                         <span className={`${!open && "hidden"} origin-left duration-200`}>
-                            {Menu.title}
+                            {Menu.title} {Menu.sup && <sup className='text-primary'>{Menu.sup} </sup>}
+                            {Menu.message && <span className='border px-2 text-xs rounded-full text-primary'>{Menu.message}</span>}
                         </span>
                     </li>
                 ))}
