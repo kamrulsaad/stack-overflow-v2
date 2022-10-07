@@ -19,9 +19,9 @@ const Top = () => {
                 <p className='cursor-pointer'>feedback</p>
             </div>
             <div className='flex gap-3'>
-                <img className='w-4 cursor-pointer' src="assets/user.svg" alt="" />
-                <img className='w-4 cursor-pointer' src="assets/user.svg" alt="" />
-                <img className='w-4 cursor-pointer' src="assets/user.svg" alt="" />
+                <img className='w-4 cursor-pointer' src="assets/misc/facebook-svgrepo-com.svg" alt="" />
+                <img className='w-4 cursor-pointer' src="assets/misc/twitter-svgrepo-com.svg" alt="" />
+                <img className='w-4 cursor-pointer' src="assets/misc/basketball-svgrepo-com.svg" alt="" />
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const Post = ({ post }) => {
     return (
         <div className='flex border-b border-slate-100 mx-20 gap-8'>
             <div className='flex-[6]'>
-                <p className='text-secondary max-w-md font-medium my-4 hover:underline'><a href={post.link}>{post.title}</a></p>
+                <p className='text-secondary max-w-md font-medium my-4 hover:underline'><a target={"_blank"} rel="noreferrer" href={post.link}>{post.title}</a></p>
                 <div className='flex gap-x-2'>
                     {post.tags.map((p, i) => <Tag text={p} key={i}></Tag>)}
                 </div>

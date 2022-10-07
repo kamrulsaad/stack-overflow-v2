@@ -38,7 +38,7 @@ const Feed = () => {
             </div>
             <hr />
             {
-                data?.items.map(p => <Post key={p.question_id} post={p}></Post>)
+                data?.items.slice(0,15).map(p => <Post key={p.question_id} post={p}></Post>)
             }
             <More></More>
         </div>

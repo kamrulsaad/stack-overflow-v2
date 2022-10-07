@@ -8,11 +8,11 @@ const Job = () => {
             <p className='text-sm'>WalletHub</p>
             <div className='flex items-center gap-4 my-2'>
                 <div className='flex items-center gap-1'>
-                    <img className='w-3' src="assets/tv.svg" alt="" />
+                    <img className='w-3' src="assets/misc/location-svgrepo-com.svg" alt="" />
                     <p className='text-xs'>Washington, DC</p>
                 </div>
                 <div className='flex items-center gap-1'>
-                    <img className='w-3' src="assets/tv.svg" alt="" />
+                    <img className='w-3' src="assets/misc/world-svgrepo-com.svg" alt="" />
                     <p className='text-xs'>Remote</p>
                 </div>
             </div>
