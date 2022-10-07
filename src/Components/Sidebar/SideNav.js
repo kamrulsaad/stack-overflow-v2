@@ -22,7 +22,7 @@ const SideNav = () => {
         >
             <img
                 src={"assets/control.png"}
-                className={`absolute cursor-pointer -right-3 top-9 w-7  rounded-full  ${!open && "rotate-180"}`}
+                className={`absolute cursor-pointer -right-3 top-12 w-7  rounded-full  ${!open && "rotate-180"}`}
                 onClick={() => setOpen(!open)} alt=''
             />
             <div className="flex gap-x-4 items-center">
