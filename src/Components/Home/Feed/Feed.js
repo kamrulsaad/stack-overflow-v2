@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import TopHeader from '../TopHeader';
 import More from './More';
 import Post from './Post';
@@ -9,20 +10,15 @@ const Feed = () => {
         top: "Questions", bottom: "top"
     }
 
-    const [posts, setPosts] = useState([]);
+    const { isLoading, data } = useQuery(['questions'], () =>
+        fetch('https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow').then(res => res.json())
+    )
 
-    useEffect(() => {
-        fetch("https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow")
-        .then(res => res.json())
-        .then(data => {
-            console.log(data.items[0])
-            setPosts(data.items.slice(0,10))
-        })
-    },[])
+    if (isLoading) return <p className='w-full text-center px-3 text-white'>Please wait loading...</p>
 
     return (
         <div className='flex-[6]'>
-            <TopHeader text={text}/>
+            <TopHeader text={text} />
             <div className='flex items-center gap-x-8 text-slate-400 ml-20 my-4 text-sm lowercase'>
                 <p className='bg-primary px-3 rounded-full text-white'>
                     Interesting
@@ -42,7 +38,7 @@ const Feed = () => {
             </div>
             <hr />
             {
-                posts.map(p => <Post key={p.question_id} post={p}></Post>)
+                data?.items.map(p => <Post key={p.question_id} post={p}></Post>)
             }
             <More></More>
         </div>

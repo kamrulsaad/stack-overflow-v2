@@ -4,9 +4,10 @@ import Feed from './Feed/Feed';
 import Rightbar from './RightBar/Rightbar';
 
 const Home = () => {
+
     return (
         <div className="w-full">
-            <TopNav />
+            <TopNav/>
             <div className='flex'>
                 <Feed></Feed>
                 <Rightbar/>
