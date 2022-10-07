@@ -1,11 +1,10 @@
+import SideNav from "./Components/Sidebar/SideNav";
 
 
 function App() {
   return (
     <div>
-      <h1>
-        Stack Overflow
-      </h1>
+      <SideNav/>
     </div>
   );
 }
