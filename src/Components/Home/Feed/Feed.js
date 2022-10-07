@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TopHeader from '../TopHeader';
 import More from './More';
 import Post from './Post';
@@ -8,6 +8,17 @@ const Feed = () => {
     const text = {
         top: "Questions", bottom: "top"
     }
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetch("https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.items[0])
+            setPosts(data.items.slice(0,10))
+        })
+    },[])
 
     return (
         <div className='flex-[6]'>
@@ -30,13 +41,10 @@ const Feed = () => {
                 </p>
             </div>
             <hr />
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <More/>
+            {
+                posts.map(p => <Post key={p.question_id} post={p}></Post>)
+            }
+            <More></More>
         </div>
     );
 };
