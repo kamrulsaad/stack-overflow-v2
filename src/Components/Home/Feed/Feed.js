@@ -1,5 +1,6 @@
 import React from 'react';
 import TopHeader from '../TopHeader';
+import More from './More';
 import Post from './Post';
 
 const Feed = () => {
@@ -35,6 +36,7 @@ const Feed = () => {
             <Post/>
             <Post/>
             <Post/>
+            <More/>
         </div>
     );
 };
