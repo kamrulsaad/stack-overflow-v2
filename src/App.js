@@ -1,3 +1,4 @@
+import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import SideNav from "./Components/Sidebar/SideNav";
 
@@ -8,7 +9,7 @@ function App() {
         <SideNav />
         <Home />
       </div>
-      <footer>Hello Footer</footer>
+      <Footer></Footer>
     </div>
   );
 }

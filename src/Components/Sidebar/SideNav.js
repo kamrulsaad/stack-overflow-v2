@@ -18,7 +18,7 @@ const SideNav = () => {
     return (
         <div
             className={` ${open ? "w-72" : "w-20"
-                }  p-5 pt-8 relative shadow-2xl duration-300`}
+                }  p-5 pt-8 relative shadow-sidenav duration-300`}
         >
             <img
                 src={"assets/control.png"}
@@ -41,7 +41,7 @@ const SideNav = () => {
                 {Menus.map((Menu, index) => (
                     <li
                         key={index}
-                        className={`flex p-2 cursor-pointer hover:bg-gray-200 duration-150 uppercase font-light text-sm items-center gap-x-4 mt-2 ${index === 0 ? "border-l-4 border-primary" : 'rounded-md'}`}
+                        className={`flex p-2 cursor-pointer hover:bg-gray-200 duration-150 uppercase font-light text-sm items-center gap-x-4 mt-2 ${index === 0 ? "border-l-4 border-primary shadow-inner" : 'rounded-md'}`}
                     >
                         <img className='w-5' src={`assets/${Menu.src}.svg`} alt='' />
                         <span className={`${!open && "hidden"} origin-left duration-200`}>

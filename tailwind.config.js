@@ -11,6 +11,9 @@ module.exports = {
         "primary": "#F58023",
         "secondary": "#0a95ff"
       },
+      boxShadow: {
+        'sidenav': '15px 0 25px -2px rgb(0 0 0 / 0.15);',
+      }
     },
   },
   plugins: [],
